@@ -26,7 +26,7 @@ const AICostCalculator = () => {
   const [outputTokens, setOutputTokens] = useState(500);
   const [apiCalls, setApiCalls] = useState(100);
 
-  const calculateCost = (inputPrice, outputPrice) => {
+  const calculateCost = (inputPrice: number, outputPrice: number) => {
     const inputCost = (inputTokens * inputPrice) / 1000;
     const outputCost = (outputTokens * outputPrice) / 1000;
     const perCallCost = inputCost + outputCost;
